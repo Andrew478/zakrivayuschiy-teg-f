@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Закрывающий тег</title>
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/animations.css" />
-  </head>
-  <body class="page">
-    <header class="header"></header>
-    <main></main>
-    <script src="./scripts/like.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Закрывающий тег</title>
+  <link rel="stylesheet" href="./fonts/fonts.css" />
+  <link rel="stylesheet" href="./styles/variables.css" />
+  <link rel="stylesheet" href="./styles/globals.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/animations.css" />
+</head>
+
+<body class="page">
+  <header class="header">
+    <div class="header__container">
+      <p class="header__text">&lt;/HTML&gt;</p>
+      <h1 class="header__title">закрывающий тег</h1>
+    </div>
+  </header>
+  <main class="content">
+    <ul class="cards__list">
+      <li class="story-card">
+        <article class="story">
+          <p class="header__title">Карточка №1</p>
+        </article>
+      </li>
+      <li class="story-card">
+        <article class="story">
+          <p class="header__title">Карточка №2</p>
+        </article>
+      </li>
+      <li class="story-card">
+        <article class="story">
+          <p class="header__title">Карточка №3</p>
+        </article>
+      </li>
+    </ul>
+    <button class="save-memories">Сохранить на память</button>
+  </main>
+  <dialog></dialog>
+  <script src="./scripts/like.js"></script>
+</body>
+
 </html>

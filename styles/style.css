@@ -10,7 +10,68 @@
 
 */
 
+
+body {
+  
+}
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-color: lightgrey; /* Временно */
+  
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.header__container {
+  background-color: var(--card-bg-color);
+  border: var(--card-border-width) solid var(--card-border-color);
+  margin-block-start: 100px;
+  margin-block-end: 98px;
+  inline-size: var(--card-inline-size);
+}
+.header__text {
+  text-transform: uppercase;
+  font-size: 65px;
+  text-align: center;
+  margin-block-start: 130px;
+  margin-block-end: 20px;
+  margin-inline: 122.5px;
+}
+
+.header__title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 23px;
+  margin-block-end: 130px;
+  margin-inline: 177.5px;
+}
+
+.content {
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.cards__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-block-end: 50px;
+}
+
+.story-card {
+  background-color: var(--card-bg-color);
+  border: var(--card-border-width) solid var(--card-border-color);
+  inline-size: var(--card-inline-size);
+}
+
+
+.save-memories {
+  display: block;
+  margin-inline: auto;
 }
