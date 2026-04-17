@@ -21,31 +21,42 @@
   </header>
   <main class="content">
     <ul class="cards__list">
-      <li class="story-card">
-        <article class="story">
-          <h2>Фритрек и нулевой спринт: Подготовка к работе</h2>
-          <div class="article-image-container">
-            <img src="./images/article-image-default.png" alt="Автобус мороженщика в пиксельном стиле" loading="lazy" class="article-image">
+      <li class="story-card-item">
+        <article class="story-card">
+          <h2 class="article-item article-header">Фритрек и нулевой спринт: Подготовка к работе</h2>
+          <div class="article-item article-image-container">
+            <img src="./images/article-image-default.png" alt="Автобус мороженщика в пиксельном стиле" loading="lazy"
+              class="article-image">
           </div>
-          <p>Абзац 1</p>
-          <p>Абзац 2</p>
-          <div class="article-actions">
-            <button>Like</button>
+          <div class="article-item article-text">
+            <p>Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И,
+              возможно, подумать, как
+              новые знания могут повлиять на ваше будущее.</p>
+            <p>Место для ваших воспоминаний о начале обучения.</p>
+          </div>
+          <div class="article-item article-actions">
+            <button type="button" class="button card__like-button button-fancy-fill button-fancy-outline"><span class="button__text">Like</span></button>
           </div>
         </article>
       </li>
-      <li class="story-card">
-        <article class="story">
+
+
+
+
+      <li class="story-card-item">
+        <article class="story-card">
           <p class="">Карточка №2</p>
         </article>
       </li>
-      <li class="story-card">
-        <article class="story">
+      <li class="story-card-item">
+        <article class="story-card">
           <p class="">Карточка №3</p>
         </article>
       </li>
     </ul>
-    <button class="button-save-memories">Сохранить на память</button>
+
+
+    <button type="button" class="button button-save-memories button-fancy-fill button-fancy-outline"><span class="button__text">Сохранить на память</span></button>
   </main>
   <dialog></dialog>
   <script src="./scripts/like.js"></script>

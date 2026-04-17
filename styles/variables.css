@@ -9,6 +9,7 @@
     --font-accent: 'PressStart2P';
     --font-normal-weight-regular: 410;
     --font-normal-weight-header: 715;
+    --font-size-storycard: 18px;
 
     --bg-gradient: repeating-linear-gradient(
         to right,
@@ -25,4 +26,7 @@
         #e7e7e7 0.01%,
         #1a1a1a 100%
     );
+    
+    --button-fill-effect-color: #fff; /* Цвет для текста у кнопок с анимацией и mix-blend-mode: difference. 
+    Обычным кнопкам противопоказан. */
 }

@@ -68,14 +68,24 @@
   margin-block-end: 50px;
 }
 
-.story-card {
+.story-card-item {
   background-color: var(--card-bg-color);
   border: var(--card-border-width) solid var(--card-border-color);
   inline-size: var(--card-inline-size);
 }
 
-.story h2 {
+.story-card {
+  font-size: var(--font-size-storycard);
+}
+
+.article-item:not(.article-header, .article-image-container) {
+  padding-inline: 25px;
+  margin-block: 25px;
+}
+
+.article-header {
   font-variation-settings: 'wght' var(--font-normal-weight-header);
+  font-size: var(--font-size-storycard);
   margin: 4px 10px;
 }
 
@@ -88,11 +98,26 @@
 .article-image-container::after {
   content: '</HTML>';
   font-family: var(--font-accent, sans-serif);
-  color: rgb(0 0 0 / 0.5);
   position: absolute;
   top: 25px;
   right: 25px;
+  color: rgb(0 0 0 / 1);
+  text-shadow:
+  -1px 0 rgba(255, 255, 255, 1), 
+  0 1px rgb(255, 255, 255, 1), 
+  1px 0 rgb(255, 255, 255, 1), 
+  0 -1px rgb(255, 255, 255, 1);
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
 }
+
+@supports((text-stroke: 1px rgba(255, 255, 255, 1)) or (-webkit-text-stroke: 1px rgba(255, 255, 255, 1))) {
+  .article-image-container::after {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
+    text-stroke: 1px rgba(255, 255, 255, 1);
+    text-shadow: none;
+  }
+} 
 
 .article-image {
   display: block;
@@ -101,8 +126,68 @@
   object-position: center;
 }
 
+.article-text p:not(:last-of-type) {
+  margin-block-end: 25px;
+}
+
+.article-actions {
+  display: flex;
+  justify-content: end;
+}
+
+.button {
+  font-family: var(--font-accent, sans-serif);
+  line-height: 90%;
+  font-size: 14px;
+  color: #000;
+  background-color: #fff;
+  border: var(--card-border-width) solid var(--card-border-color);
+}
+
+.card__like-button {
+  padding: 12.5px 37px;
+}
+
 .button-save-memories {
   display: block;
   margin-inline: auto;
   margin-block-end: 100px;
+  padding: 20.5px 20px;
+}
+
+/* Класс для кнопок, которые делают анимацию заполнения */
+.button-fancy-fill {
+  position: relative;
+}
+
+.button-fancy-fill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  transition: scale 0.5s ease-in-out;
+  transform-origin: left center;
+  scale: 0 1;
+}
+.button-fancy-fill:hover::after {
+  scale: 1 1;
+}
+
+.button__text {
+  color: var(--button-fill-effect-color);
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+/* Класс для кнопок, которые делают анимацию при фокусе через tab */
+.button-fancy-outline {
+  transition: box-shadow 0.3s ease;
+}
+.button-fancy-outline:focus {
+  outline: none;
+}
+
+.button-fancy-outline:focus-visible {
+  box-shadow: 2px 2px 0 #000;
 }
