@@ -151,11 +151,18 @@
 }
 
 .button-save-memories {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   margin-inline: auto;
   margin-block-end: 100px;
   padding: 20.5px 20px;
 }
+
+/* .button-save-memories svg {
+  transform-origin: center;
+} */
 
 /* Класс для кнопок, которые делают анимацию заполнения */
 .button-fancy-fill {
@@ -177,6 +184,13 @@
 }
 
 .button__text {
+  color: var(--button-fill-effect-color);
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+.button__icon {
   color: var(--button-fill-effect-color);
   position: relative;
   z-index: 1;
@@ -290,21 +304,27 @@
 .image-effect-sepia {
   filter: sepia(200%);
 }
+
 .image-effect-saturate {
   filter: saturate(150%);
 }
+
 .image-effect-grayscale {
   filter: grayscale(70);
 }
+
 .image-effect-brightness {
   filter: brightness(86%);
 }
+
 .image-effect-contrast {
   filter: contrast(5);
 }
+
 .image-effect-blur {
   filter: blur(2px);
 }
+
 .image-effect-saturate-contrast-brightness {
   filter: saturate(200%);
   filter: contrast(3);
