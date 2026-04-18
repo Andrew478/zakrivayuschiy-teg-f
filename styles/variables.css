@@ -29,4 +29,8 @@
     
     --button-fill-effect-color: #fff; /* Цвет для текста у кнопок с анимацией и mix-blend-mode: difference. 
     Обычным кнопкам противопоказан. */
+
+    --heart-button-color-stroke: #000;
+    --heart-button-color-fill: #FF0000;
+    --heart-button-color-core: #fff;
 }
