@@ -119,6 +119,33 @@
   }
 }
 
+.card-label-1.article-image-container::after {
+  content: '</Начало>';
+}
+.card-label-2.article-image-container::after {
+  content: '</Первый проект>';
+}
+.card-label-3.article-image-container::after {
+  content: '</Изумление>';
+}
+.card-label-4.article-image-container::after {
+  content: '</Мысли>';
+}
+.card-label-5.article-image-container::after {
+  content: '</Поддержка>';
+}
+.card-label-6.article-image-container::after {
+  content: '</Путь самурая>';
+}
+.card-label-7.article-image-container::after {
+  content: '</Перегруз>';
+}
+.card-label-8.article-image-container::after {
+  content: '</Здесь>';
+}
+
+
+
 .article-image {
   display: block;
   inline-size: 100%;
@@ -318,11 +345,11 @@
 }
 
 .image-effect-contrast {
-  filter: contrast(5);
+  filter: contrast(1.2);
 }
 
 .image-effect-blur {
-  filter: blur(2px);
+  filter: blur(1px);
 }
 
 .image-effect-saturate-contrast-brightness {
