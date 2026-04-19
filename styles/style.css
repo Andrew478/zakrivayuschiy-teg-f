@@ -353,9 +353,7 @@
 }
 
 .image-effect-saturate-contrast-brightness {
-  filter: saturate(200%);
-  filter: contrast(3);
-  filter: brightness(80%);
+  filter: saturate(120%) contrast(0.9) brightness(80%);
 }
 
 /* ------ */
