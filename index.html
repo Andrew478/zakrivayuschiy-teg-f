@@ -5,6 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Закрывающий тег</title>
+  <link rel="icon" href="./images/favicon.ico" sizes="any">
+  <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
   <link rel="stylesheet" href="./fonts/fonts.css" />
   <link rel="stylesheet" href="./styles/variables.css" />
   <link rel="stylesheet" href="./styles/globals.css" />
@@ -336,14 +339,28 @@
         </article>
       </li>
     </ul>
-    <button type="button" class="button button-save-memories button-fancy-fill button-fancy-outline">
-      <svg width="21" height="21" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg" class="button__icon">
+    <button type="button" class="button button-save-memories button-fancy-fill button-fancy-outline"
+      onclick="window['dialog-save-memories'].showModal()" aria-controls="dialog-save-memories">
+      <svg width="21" height="21" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"
+        class="button__icon">
         <use href="svg/floppy.svg#floppy-disc"></use>
       </svg>
       <span class="button__text">Сохранить на память</span>
     </button>
   </main>
-  <dialog></dialog>
+  <dialog id="dialog-save-memories" class="dialog-save-memories">
+    <div class="dialog-save-memories__content">
+      <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"
+        class="dialog-icon">
+        <use href="svg/floppy.svg#floppy-disc"></use>
+      </svg>
+      <p>Вставьте дискету, чтобы продолжить</p>
+    </div>
+    <button type="button" class="button button-dialog-close button-fancy-fill button-fancy-outline"
+      onclick="window['dialog-save-memories'].close()">
+      <span class="button__text">ОК</span>
+    </button>
+  </dialog>
   <script src="./scripts/like.js"></script>
 </body>
 

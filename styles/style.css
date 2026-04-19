@@ -38,20 +38,20 @@
 
 .header__text {
   text-transform: uppercase;
-  font-size: 65px;
+  font-size: clamp(3.0625rem, 0.0625rem + 6.25vw, 4.0625rem);
   text-align: center;
   margin-block-start: 130px;
   margin-block-end: 20px;
-  margin-inline: 122.5px;
+  margin-inline: auto;
   font-family: var(--font-accent, sans-serif);
 }
 
 .header__title {
   text-transform: uppercase;
   text-align: center;
-  font-size: 23px;
+  font-size: clamp(0.875rem, -0.8125rem + 3.5156vw, 1.4375rem);
   margin-block-end: 130px;
-  margin-inline: 177.5px;
+  margin-inline: auto;
   font-family: var(--font-accent, sans-serif);
 }
 
@@ -332,3 +332,64 @@
 }
 
 /* ------ */
+
+.dialog-save-memories {
+  inline-size: 353px;
+  min-block-size: 191px;
+  background-color: var(--card-bg-color);
+  border: var(--card-border-width) solid var(--card-border-color);
+}
+
+.dialog-save-memories::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.dialog-save-memories__content {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  font-family: var(--font-accent, sans-serif);
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.dialog-icon {
+  flex-shrink: 0;
+}
+
+.button-dialog-close {
+  display: block;
+  margin: 30px auto;
+  padding: 0;
+  min-inline-size: 293px;
+  min-block-size: 38px;
+}
+
+@media (width <=375px) {
+
+  .dialog-save-memories {
+    padding: 0;
+  }
+
+  .dialog-save-memories__content {
+    margin-inline: 40px;
+  }
+
+  .button-dialog-close {
+    min-inline-size: 261px;
+  }
+
+  .button-save-memories {
+    flex-direction: column;
+    padding-block: 17px;
+  }
+
+  .button__icon {
+    width: 28px;
+    height: 28px;
+  }
+
+}
