@@ -15,6 +15,7 @@
   min-block-size: 100dvb;
   font-family: var(--font-normal), Arial, 'San Francisco', Helvetica, Roboto, sans-serif;
   font-variation-settings: 'wght' var(--font-normal-weight-regular);
+  line-height: 100%;
   background-color: white;
   background-image: var(--bg-gradient);
   background-size: cover;
@@ -31,28 +32,28 @@
 .header__container {
   background-color: var(--card-bg-color);
   border: var(--card-border-width) solid var(--card-border-color);
+  inline-size: var(--card-inline-size);
+  padding-block: 130px;
   margin-block-start: 100px;
   margin-block-end: 98px;
-  inline-size: var(--card-inline-size);
+  margin-inline: auto;
 }
 
 .header__text {
   text-transform: uppercase;
   font-size: clamp(3.0625rem, 0.0625rem + 6.25vw, 4.0625rem);
   text-align: center;
-  margin-block-start: 130px;
-  margin-block-end: 20px;
-  margin-inline: auto;
   font-family: var(--font-accent, sans-serif);
+  line-height: 100%;
+  margin-block-end: 20px;
 }
 
 .header__title {
   text-transform: uppercase;
   text-align: center;
   font-size: clamp(0.875rem, -0.8125rem + 3.5156vw, 1.4375rem);
-  margin-block-end: 130px;
-  margin-inline: auto;
   font-family: var(--font-accent, sans-serif);
+  line-height: 100%;
 }
 
 .content {
@@ -122,35 +123,44 @@
 .card-label-1.article-image-container::after {
   content: '</Начало>';
 }
+
 .card-label-2.article-image-container::after {
   content: '</Первый проект>';
 }
+
 .card-label-3.article-image-container::after {
   content: '</Изумление>';
 }
+
 .card-label-4.article-image-container::after {
   content: '</Мысли>';
 }
+
 .card-label-5.article-image-container::after {
   content: '</Поддержка>';
 }
+
 .card-label-6.article-image-container::after {
   content: '</Путь самурая>';
 }
+
 .card-label-7.article-image-container::after {
   content: '</Перегруз>';
 }
+
 .card-label-8.article-image-container::after {
   content: '</Здесь>';
 }
-
-
 
 .article-image {
   display: block;
   inline-size: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.article-text {
+  line-height: 21px;
 }
 
 .article-text p:not(:last-of-type) {
@@ -184,7 +194,7 @@
   gap: 8px;
   margin-inline: auto;
   margin-block-end: 100px;
-  padding: 20.5px 20px;
+  padding: 17px 20px;
 }
 
 /* .button-save-memories svg {
@@ -363,6 +373,7 @@
   min-block-size: 191px;
   background-color: var(--card-bg-color);
   border: var(--card-border-width) solid var(--card-border-color);
+  padding: 30px;
 }
 
 .dialog-save-memories::backdrop {
@@ -374,7 +385,7 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
-  margin: 30px;
+  margin-bottom: 30px;
   font-family: var(--font-accent, sans-serif);
   font-size: 14px;
   line-height: 150%;
@@ -387,7 +398,6 @@
 
 .button-dialog-close {
   display: block;
-  margin: 30px auto;
   padding: 0;
   min-inline-size: 293px;
   min-block-size: 38px;
@@ -395,16 +405,29 @@
 
 @media (width <=375px) {
 
+  .header__container {
+    padding-block: 120px;
+    margin-block-end: 100px;
+  }
+
+  .article-header {
+    line-height: 120%;
+  }
+
   .dialog-save-memories {
-    padding: 0;
+    padding-inline: 0;
+    inline-size: auto;
   }
 
   .dialog-save-memories__content {
-    margin-inline: 40px;
+    margin-block-end: 30px;
+    margin-inline: auto;
+    max-inline-size: 261px;
   }
 
   .button-dialog-close {
     min-inline-size: 261px;
+    margin-inline: auto;
   }
 
   .button-save-memories {
