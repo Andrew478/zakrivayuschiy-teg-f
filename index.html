@@ -358,25 +358,16 @@
     </button>
   </main>
   <dialog id="dialog-save-memories" class="dialog-save-memories">
-    <!-- <div class="dialog-save-memories__content">
-      <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"
-        class="dialog-icon">
-        <use href="svg/floppy.svg#floppy-disc"></use>
-      </svg>
-      <p>Вставьте дискету, чтобы продолжить</p>
-    </div>
-     -->
     <div class="dialog-save-memories__content">
       <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"
         class="dialog-icon">
         <use href="svg/floppy.svg#floppy-disc"></use>
       </svg>
       <p>Вставьте дискету, чтобы продолжить</p>
-    </div>
+        </div>
     <button type="button" class="button button-dialog-close button-fancy-fill button-fancy-outline"
-      onclick="window['dialog-save-memories'].close()">
-      <span class="button__text">ОК</span>
-    </button>
+    onclick="window['dialog-save-memories'].close()"
+    ><span class="button__text">ok</span></button>
   </dialog>
   <script src="./scripts/like.js"></script>
 </body>
