@@ -120,35 +120,35 @@
   }
 }
 
-.card-label-1.article-image-container::after {
+.card-label-beginning.article-image-container::after {
   content: '</Начало>';
 }
 
-.card-label-2.article-image-container::after {
+.card-label-first-project.article-image-container::after {
   content: '</Первый проект>';
 }
 
-.card-label-3.article-image-container::after {
+.card-label-amusement.article-image-container::after {
   content: '</Изумление>';
 }
 
-.card-label-4.article-image-container::after {
+.card-label-thoughts.article-image-container::after {
   content: '</Мысли>';
 }
 
-.card-label-5.article-image-container::after {
+.card-label-support.article-image-container::after {
   content: '</Поддержка>';
 }
 
-.card-label-6.article-image-container::after {
+.card-label-samurai.article-image-container::after {
   content: '</Путь самурая>';
 }
 
-.card-label-7.article-image-container::after {
+.card-label-overload.article-image-container::after {
   content: '</Перегруз>';
 }
 
-.card-label-8.article-image-container::after {
+.card-label-now-im-here.article-image-container::after {
   content: '</Здесь>';
 }
 
@@ -376,16 +376,13 @@
 .dialog-save-memories {
   background-color: var(--card-bg-color);
   border: var(--card-border-width) solid var(--card-border-color);
-  padding: 30px;
+  padding-block: 30px;
   min-inline-size: 353px;
-  min-block-size: 191px;
   font-family: var(--font-accent, sans-serif);
   font-size: 14px;
   line-height: 150%;
   flex-direction: column;
   gap: 30px;
-  overflow: hidden;
-  opacity: 0.5;
 }
 
 .dialog-save-memories[open] {
@@ -393,7 +390,7 @@
 }
 
 .dialog-save-memories::backdrop {
-  background-color: rgb(0 0 0 / 0); /* 0.75*/
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 .button-dialog-close {
@@ -402,6 +399,7 @@
   inline-size: 293px;
   min-block-size: 38px;
   padding: 9px 17px;
+  margin-inline: auto;
 }
 
 .dialog-save-memories__content {
@@ -410,6 +408,8 @@
   display: flex;
   gap: 20px;
   align-items: center;
+  text-transform: uppercase;
+  margin-inline: auto; 
 }
 
 .dialog-icon {
@@ -438,7 +438,6 @@
   } 
 
   .dialog-save-memories {
-    padding-inline: 40px;
     min-inline-size: 341px;
   }
 
